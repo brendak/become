@@ -1,7 +1,22 @@
-<div ng-controller='newMentorController as meep' style="width: 80%;">
-
+<div ng-controller='showMenteeController as meep' style="width: 80%;">
 
 <h2 style="margin-left: 30px; color:white;">Mentors For You</h2>
+<div id="myprofile">
+  <h3 style="display: inline-block;">Your Profile</h3><hr>
+  <p>Email: {{meep.showmentee.email}}</p>
+  <p>Zipcode: {{meep.showmentee.zipcode}}</p>
+  <p>Wants to learn: {{meep.showmentee.focus}}</p>
+  <p>Industry: {{meep.showmentee.industry}}</p>
+  <p>Linkedin: {{meep.showmentee.linkedin}}</p>
+  <p>Background: {{meep.showmentee.background}}</p>
+  <p>Age: {{meep.showmentee.age}}</p>
+  <p>Range: {{meep.showmentee.range}}</p>
+  <p><a href="#/">Edit Profile<a></p>
+
+</div>
+</div>
+
+<div ng-controller='filteredMentorController as meep' style="width: 80%;">
 <div id="available_matches">
 <div class="card small" ng-repeat="x in meep.mentors" id="profile">
     <div class="card-image waves-effect waves-block waves-light">
@@ -17,24 +32,9 @@
       <p class="profileinfo" style="margin-left: 26px;">Email: {{x.email}}</p>
       <p class="profileinfo" style="margin-left: 26px;">Industry: {{x.industry}}</p>
       <p class="profileinfo" style="margin-left: 26px;">LinkedIn: {{x.linkedin}}</p>
-      <p class="profileinfo" style="margin-left: 26px;">Background: LGBT, Latina</p>
+      <p class="profileinfo" style="margin-left: 26px;">Background: {{x.background}}</p>
       <p class="profileinfo" style="margin-left: 26px;">Age: {{x.age}}</p>
     </div>
   </div>
 </div>
-</div>
-<div id="myprofile">
-  <h3 style="display: inline-block;">Your Profile</h3><hr>
-  <p>Email: Peanut@gmail.com</p>
-  <p>Zipcode: 90232</p>
-  <p>Wants to learn: Data Architecture</p>
-  <p>Industry: Technology</p>
-  <p>Linkedin: Linkedin.com/in/peanut</p>
-  <p>Background: LGBT, Latina</p>
-  <p>Age: 25</p>
-  <p>Range: 10 Miles</p>
-  <p><a href="#/">Edit Profile<a></p>
-
-</div>
-
 </div>

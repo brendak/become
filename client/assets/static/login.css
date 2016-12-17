@@ -1,3 +1,7 @@
+*{
+  font-family: lato, helvetica;
+}
+
 #login{
   height: 100%;
 }

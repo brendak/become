@@ -8,7 +8,6 @@ $(document).ready(function(){
   });
   $('select').material_select();
   $('.chips').material_chip();
-
 });
 </script>
 
@@ -18,6 +17,7 @@ $(document).ready(function(){
   <p ng-repeat='error in meep.regErrors'>{{error.message}}</p>
 
 <div class="container">
+  <h1 span style = "color:white;">Mentee Login</h1>
   <div class="inner row" id="row1">
     <form class="col s12">
      <div class="row">
@@ -57,7 +57,6 @@ $(document).ready(function(){
        <p class="range-field">
       <input type="range" id="test5" min="0" max="100" ng-model='meep.mentee.range'/>
     </p></div></div><br>
-
      <button id="btnClick" class="waves-effect waves-light btn" >Next</button>
   </div>
 </form>
@@ -68,7 +67,7 @@ $(document).ready(function(){
     <form class="col s12">
      <div class="inner row" id="row6"  >
        <div class="input-field col s6" >
-         <input id="focus" type="text" ng-model='meep.mentee.focus'>
+         <input id="focus" type="text" ng-model='meep.mentee.focus' placeholder="Data Architecture, UX, Management">
          <label for="focus">What do you want to get better at?</label>
        </div><br>
      </div>
@@ -78,22 +77,18 @@ $(document).ready(function(){
          <label for="industry">What industry do you want help in?</label>
        </div><br>
       </div>
-
-     <div class="inner row" id="row9" >
-       <div class="input-field col s6" class="chips">
-         <label for="background">What is your background?</label>
-
-     <div class="chips" ><input ng-model='meep.mentee.background'></div>
-   </div><br>
- </div>
-
+      <div class="inner row" id="row9" >
+        <div class="input-field col s6" class="chips">
+          <label for="background">What is your background?</label>
+      <div class="chips" ><input ng-model='meep.mentee.background'></div>
+    </div><br>
+  </div>
      <div class="inner row" id="row8" >
        <div class="input-field col s6" >
          <input id="linkedin" type="text" ng-model='meep.mentee.linkedin'>
          <label for="linkedin">Linkedin</label>
        </div><br>
      </div>
-
      <div class="inner row" id="row10" >
        <div class="input-field col s6" >
          <label for="age">Age</label>
@@ -101,17 +96,12 @@ $(document).ready(function(){
      <p class="range-field">
   <input type="range" id="test5" min="0" max="100" ng-model='meep.mentee.age'/>
 </p></div></div>
-
-
      <div class="inner row" id="row11" >
        <input class="waves-effect waves-light btn" type="submit" id="menteeformsubmit" value="GO" ng-click='meep.registerMentee()'><br>
          </div>
    </form>
    </div>
   </div>
-
-
-
 </div>
 
 

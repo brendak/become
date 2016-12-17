@@ -1,3 +1,7 @@
+*{
+  font-family: lato, helvetica;
+}
+
 #header .readmore {
   display: block;
   width: 43px;

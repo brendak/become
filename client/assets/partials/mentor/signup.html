@@ -15,8 +15,9 @@ $(document).ready(function(){
   <p ng-repeat='error in meep.regErrors'>{{error.message}}</p>
 
 <div class="container">
+  <h1 span style ="color:white;">Mentor Login</h1>
   <div class="inner row" id="row1">
-    <form class="col s12">
+    <form class="col s12" >
      <div class="row">
        <div class="input-field col s6">
          <input id="first_name" type="text" ng-model='meep.mentor.first'>
@@ -52,7 +53,7 @@ $(document).ready(function(){
          <label for="range">Miles Range You're Willing To Go</label>
          <br>
        <p class="range-field">
-      <input type="range" id="test5" min="0" max="100" ng-model='meep.mentor.range'/>
+      <input type="range" id="test5" min="0" max="30" ng-model='meep.mentor.range'/>
     </p></div></div><br>
      <button id="btnClick" class="waves-effect waves-light btn" >Next</button>
   </div>
@@ -64,31 +65,28 @@ $(document).ready(function(){
     <!-- <form class="col s12"> -->
      <div class="inner row" id="row6"  >
        <div class="input-field col s6" >
-         <input id="focus" type="text" ng-model='meep.mentor.focus'>
+         <input id="focus" type="text" ng-model='meep.mentor.focus' placeholder="Data Architecture, Project Management, UX Design">
          <label for="focus">What do you want to help with?</label>
        </div><br>
      </div>
      <div class="inner row" id="row7" >
        <div class="input-field col s6" >
-         <input id="industry" type="text" ng-model='meep.mentor.industry'>
+         <input id="industry" type="text" ng-model='meep.mentor.industry' placeholder="">
          <label for="industry">What industry are you in?</label>
        </div><br>
      </div>
-
      <div class="inner row" id="row9" >
        <div class="input-field col s6" class="chips">
          <label for="background">What is your background?</label>
-     <div class="chips"><input type="text" ng-model='meep.mentor.background'"></div>
+     <div class="chips" ><input ng-model='meep.mentor.background'></div>
    </div><br>
  </div>
-
      <div class="inner row" id="row8" >
        <div class="input-field col s6" >
          <input id="linkedin" type="text" ng-model='meep.mentor.linkedin'>
          <label for="linkedin">Linkedin</label>
        </div><br>
      </div>
-
      <div class="inner row" id="row10" >
        <div class="input-field col s6" >
          <label for="age">Age</label>
@@ -99,7 +97,9 @@ $(document).ready(function(){
 
 <div class="inner row" id="row11" >
     <div class="file-field input-field">
-      <div class="btn">
+      <div class="btn" ngf-select ng-model="meep.mentor.file" name="file" ngf-pattern="'image/*'"
+    ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100"
+    ngf-resize="{width: 100, height: 100}">
         <span>Upload a photo of you!</span>
         <input type="file" ng-model='meep.mentor.photo'>
       </div><p></p>
