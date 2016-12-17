@@ -29,34 +29,28 @@ $httpProvider.interceptors.push(
       controller: 'newMenteeController',
       controllerAs: "meep"
   })
-  .when('/mentor/platform',{
+  .when('/mentor/platform/:id',{
       templateUrl: 'assets/partials/mentor/platform2.html',
-      controller: 'newMenteeController',
-      controllerAs: "meep"
-    })
-    .when('/mentee/platform',{
-        templateUrl: 'assets/partials/mentee/platform.html',
-        controller: 'newMentorController',
-        controllerAs: "meep"
+      // controller: 'filteredMenteeController',
+      // controllerAs: "meep"
+  })
+  .when('/mentee/platform/:id',{
+      templateUrl: 'assets/partials/mentee/platform.html',
+      // controller: 'filteredMentorController',
+      // controllerAs: "meep"
   })
   .when('/login',{
       templateUrl: 'assets/partials/login.html',
       // controller: 'newMentorController',
       // controllerAs: "meep"
   })
-  .when('/test',{
-      templateUrl: 'assets/partials/test.html',
-      controller: 'newMentorController',
-      controllerAs: "meep"
+  .when('/message',{
+      templateUrl: 'assets/partials/message.html',
+      controller: 'chat'
   })
   .when('/form',{
       templateUrl: 'assets/partials/form.html',
       controller: 'mentorController',
-      controllerAs: "meep"
-  })
-  .when('/codementor/:id',{
-      templateUrl: 'assets/partials/codementor.html',
-      controller: 'showController',
       controllerAs: "meep"
   })
     .otherwise({

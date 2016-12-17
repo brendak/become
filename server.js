@@ -9,8 +9,6 @@ var mongoose = require( 'mongoose' ),
     port     = process.env.PORT || 8000,
     app      = express();
 
-var app = express();
-
 var sessionConfig = {
      secret:'CookieMonster', // Secret name for decoding secret and such
      resave:false, // Don't resave session if no changes were made

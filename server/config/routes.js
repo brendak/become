@@ -16,7 +16,13 @@ module.exports = function(app){
   app.get('/mentee/platform', mentors.getAllMentees);
   app.post('/mentor/login', mentors.loginMentor);
   app.post('/mentee/login', mentors.loginMentee);
-
+  app.get('/mentor/filtermentees', mentors.filtermentees);
+  // app.post('/mentor/filtermentors', mentors.filtermentors);
+  app.use(userAuth);
+  app.post('/logout', mentors.logout);
+  app.post('/logout', mentors.logoutTwo);
+  app.get('/showmentee/:id', mentors.showmentee);
+  app.get('/showmentor/:id', mentors.showmentor);
   // app.post('/mentor2', mentors.registerMentor2);
   // app.get('/platform', mentors.platform);
   // app.post('/mentor', mentors.registerMentor);
@@ -33,3 +39,10 @@ module.exports = function(app){
   // // app.post('/user/:id/comments', comments.create);
   // app.post('/logout', users.logout);
 };
+  function userAuth(req,res,next){
+    if(req.session.user){
+      next();
+    }else{
+      res.sendStatus(401);
+    }
+  }

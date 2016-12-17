@@ -1,3 +1,7 @@
+*{
+  font-family: lato, helvetica;
+}
+
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 
 /* entypo */
@@ -106,7 +110,7 @@ ul li {
 ul li:hover {color:rgba(0,0,0,.5);}
 
 ul:after {
-  content:'';
+  /*content:'';*/
   display:block;
   position:absolute;
   left:0;

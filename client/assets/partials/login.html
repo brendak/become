@@ -6,20 +6,30 @@
   <div id="menteelogin" ng-controller='newMenteeController as meep'>
     <p ng-repeat='error in loginErrors'>{{error.message}}</p>
     <h3>Mentee Login!</h3>
-    <form>
-    	<input placeholder = "Email Address" type = 'text' ng-model = 'mentee.email'>
-    	<input placeholder = "Password" type = 'text' ng-model = 'mentee.password'>
-    	<input type="submit" class="waves-effect waves-light btn" name="Login" ng-click='meep.loginMentee(user)' >
+    <form ng-submit = 'meep.loginMentee(meep.user)'>
+    	<input placeholder = "Email Address" type = 'text' ng-model = 'meep.user.email'>
+    	<input placeholder = "Password" type = 'text' ng-model = 'meep.user.password'>
+    	<input type="submit" class="waves-effect waves-light btn" name="Login">
     </form>
   </div>
 
   <div id="mentorlogin" ng-controller='newMentorController as meep'>
     <p ng-repeat='error in loginErrors'>{{error.message}}</p>
     <h3>Mentor Login!</h3>
-    <form>
-    	<input placeholder = "Email Address" type = 'text' ng-model = 'mentor.email'>
-    	<input placeholder = "Password" type = 'text' ng-model = 'mentor.password'>
-    	<input type="submit" class="waves-effect waves-light btn" name="Login" ng-click='meep.loginMentor(user)'>
+    <form ng-submit = 'meep.loginMentor(meep.user)'>
+    	<input placeholder = "Email Address" type = 'text' ng-model = 'meep.user.email'>
+    	<input placeholder = "Password" type = 'text' ng-model = 'meep.user.password'>
+    	<input type="submit" class="waves-effect waves-light btn" name="Login">
     </form>
   </div>
 </div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
