@@ -123,6 +123,17 @@ Mentee.find({focus:req.body.focus}, function(err, user){
     })
   }
 
+  this.filtermentors = function(req, res){
+  Mentor.find({focus:req.body.focus}, function(err, user){
+        if(err) {
+          console.log("none found")
+        }
+        else{
+            res.json(user);
+        }
+      })
+    }
+
   this.showmentee = function(req,res){
     console.log(req.params.id)
     Mentee.findOne({_id: req.params.id}, function(err, mentee) {

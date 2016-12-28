@@ -15,26 +15,7 @@ function filteredMenteeController(mentorFactory, $location, $routeParams, $filte
 
 }
 
-  // function filterMentees(data){
-  //   console.log('This is the data in the filteredMenteeController')
-  //   console.log(data)
-  //   _this.mentees = data;
-  //   _this.mentee = {};
-  // }
-  // this.mentees = {};
-  // this.mentee = {};
-  //
-  // mentorFactory.getit(filterMentees);
-  // }
 
-
-
-  // function setMentees(data){
-  //   _this.mentees = data;
-  //   _this.mentee = {};
-  // }
-  // this.mentees = {};
-  // this.mentee = {};
 
   // mentorFactory.getmentees(setMentees);
 

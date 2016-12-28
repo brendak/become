@@ -17,7 +17,7 @@ module.exports = function(app){
   app.post('/mentor/login', mentors.loginMentor);
   app.post('/mentee/login', mentors.loginMentee);
   app.get('/mentor/filtermentees', mentors.filtermentees);
-  // app.post('/mentor/filtermentors', mentors.filtermentors);
+  app.get('/mentor/filtermentors', mentors.filtermentors);
   app.use(userAuth);
   app.post('/logout', mentors.logout);
   app.post('/logout', mentors.logoutTwo);
