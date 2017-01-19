@@ -6,7 +6,7 @@ var mongoose = require( 'mongoose' ),
     bp       = require('body-parser'),
     path     = require( 'path' ),
     root     = __dirname,
-    port     = process.env.PORT || 8000,
+    port     = process.env.PORT || 5000,
     app      = express();
 
 var sessionConfig = {
@@ -28,7 +28,7 @@ app.use( express.static( path.join( root, 'client')));
 app.use(session(sessionConfig));
 
 
-app.listen( 8000, function() {
+app.listen( 5000, function() {
   console.log( `server running on port 8000` );
 });
 
